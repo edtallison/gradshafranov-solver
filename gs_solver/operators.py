@@ -32,7 +32,6 @@ def apply_grad_shafranov_operator(psi: np.ndarray, grid: Grid2D) -> np.ndarray:
     return lap
 
 def grad_shafranov_rhs(psi: np.ndarray, grid: Grid2D) -> np.ndarray:
-    
     R = grid.R
     NR, NZ = grid.shape
     rhs = np.zeros_like(psi)
