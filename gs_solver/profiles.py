@@ -9,7 +9,7 @@ def pressure(psi: np.ndarray) -> np.ndarray:
     return p0 * (1.0 - psi / (psi_max + 1e-12))
 
 
-def dp_psi(psi: np.ndarray) -> np.ndarray:
+def dp_dpsi(psi: np.ndarray) -> np.ndarray:
     """
     dp/dpsi: derivative of pressure profile wrt psi.
     for the simple example above, dp/dpsi = -p0 / psi_max (inside plasma), 0 outside.
@@ -31,7 +31,7 @@ def F(psi: np.ndarray) -> np.ndarray:
     F0 = 1.0
     return F0 * np.ones_like(psi)
 
-def dF2_dspi(psi: np.ndarray) -> np.ndarray:
+def dF2_dpsi(psi: np.ndarray) -> np.ndarray:
     """
     d(F^2)/dpsi
     """
