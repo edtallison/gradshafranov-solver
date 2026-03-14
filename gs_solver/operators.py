@@ -42,6 +42,6 @@ def grad_shafranov_rhs(psi: np.ndarray, grid: Grid2D) -> np.ndarray:
     for i in range(NR):
         Ri2 = R[i]**2
         for j in range(NZ):
-            rhs[i, j] = -MU0*Ri2*dp - 0.5*dF2
+            rhs[i, j] = -MU0*Ri2*dp[i, j] - 0.5*dF2[i, j]
 
     return rhs
